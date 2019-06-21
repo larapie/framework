@@ -1,0 +1,14 @@
+{
+  "name": "larapie/foundation",
+  "description": "The Larapie Foundation.",
+  "license": "MIT",
+  "require": {
+    "larapie/core": "^1.0",
+    "larapie/guard" : "^1.0",
+    "larapie/generator": "dev-master",
+    "larapie/transformer": "^1.0"
+  },
+  "require-dev": {
+
+  }
+}
