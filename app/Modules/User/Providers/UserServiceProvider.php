@@ -3,12 +3,9 @@
 namespace App\Modules\User\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Modules\User\Contracts\UserRepositoryContract;
-use App\Modules\User\Contracts\UserServiceContract;
-use App\Modules\User\Repositories\UserRepository;
-use App\Modules\User\Services\UserService;
+use Larapie\Core\Contracts\Scheduling;
 
-class UserServiceProvider extends ServiceProvider
+class UserServiceProvider extends ServiceProvider implements Scheduling
 {
     /**
      * Boot the application events.
@@ -28,4 +25,10 @@ class UserServiceProvider extends ServiceProvider
     {
 
     }
+
+    public function schedule(\Illuminate\Console\Scheduling\Schedule $schedule): void
+    {
+        //Schedule commands or jobs here.
+    }
+
 }

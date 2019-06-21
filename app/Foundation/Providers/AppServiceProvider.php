@@ -16,7 +16,9 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(LarapieServiceProvider::class);
-        $this->app->register(LarapieGeneratorServiceProvider::class);
+
+        if (!$this->app->environment('production'))
+            $this->app->register(LarapieGeneratorServiceProvider::class);
     }
 
     /**
@@ -26,6 +28,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
     }
 }

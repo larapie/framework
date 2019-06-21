@@ -3,7 +3,7 @@
 namespace App\Foundation\Kernels;
 
 use Illuminate\Console\Scheduling\Schedule;
-use Illuminate\Foundation\Console\Kernel;
+use Larapie\Core\Kernels\ConsoleKernel as Kernel;
 
 class ConsoleKernel extends Kernel
 {
@@ -12,20 +12,17 @@ class ConsoleKernel extends Kernel
      *
      * @var array
      */
-    protected $commands = [
-        //
-    ];
+    protected $commands = [];
 
     /**
      * Define the application's command schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param \Illuminate\Console\Scheduling\Schedule $schedule
      * @return void
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        parent::schedule($schedule);
     }
 
     /**
@@ -35,8 +32,6 @@ class ConsoleKernel extends Kernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
-
         require base_path('app/Foundation/Routes/console.php');
     }
 }

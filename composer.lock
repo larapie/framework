@@ -638,16 +638,16 @@
         },
         {
             "name": "larapie/core",
-            "version": "1.0.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larapie/core.git",
-                "reference": "08f9ef5696e3cd809483f7d6a494706f05b11d9e"
+                "reference": "012b8104689d94dd617f69058703ea5597e09a4a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larapie/core/zipball/08f9ef5696e3cd809483f7d6a494706f05b11d9e",
-                "reference": "08f9ef5696e3cd809483f7d6a494706f05b11d9e",
+                "url": "https://api.github.com/repos/larapie/core/zipball/012b8104689d94dd617f69058703ea5597e09a4a",
+                "reference": "012b8104689d94dd617f69058703ea5597e09a4a",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
                 "laravel",
                 "rest"
             ],
-            "time": "2019-06-21T16:49:46+00:00"
+            "time": "2019-06-21T18:37:13+00:00"
         },
         {
             "name": "larapie/generator",
