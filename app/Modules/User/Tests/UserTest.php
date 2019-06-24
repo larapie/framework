@@ -1,10 +1,8 @@
 <?php
 
-
 namespace App\Modules\User\Tests;
 
-
-use App\Foundation\Abstracts\Test;
+use Larapie\Core\Base\Test;
 
 class UserTest extends Test
 {

@@ -1,15 +1,13 @@
 <?php
 
-
 namespace App\Modules\User\Http\Controllers\Api;
 
-
-use App\Foundation\Abstracts\Controller;
 use App\Modules\User\Models\User;
 use App\Modules\User\Transformers\UserTransformer;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Larapie\Core\Base\Controller;
 
 class UserController extends Controller
 {

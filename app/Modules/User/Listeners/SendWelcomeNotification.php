@@ -10,13 +10,11 @@ namespace App\Modules\User\Listeners;
 
 use App\Modules\User\Events\UserRegisteredEvent;
 use App\Modules\User\Notifications\WelcomeNotification;
-use Illuminate\Notifications\Notification;
+use Larapie\Core\Base\QueuedListener;
 
-class SendWelcomeNotification extends Notification
+class SendWelcomeNotification extends QueuedListener
 {
-    /**
-     * @param UserRegisteredEvent $event
-     */
+
     public function handle(UserRegisteredEvent $event): void
     {
         $event->getUser()->notify(new WelcomeNotification($event->getUser()));

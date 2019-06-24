@@ -25,11 +25,9 @@
             <directory suffix=".php">./app/Foundation</directory>
             <exclude>
                 <directory suffix=".php">./app/Modules/*/Routes</directory>
-                <directory suffix=".php">./app/Modules/*/Resources</directory>
                 <directory suffix=".php">./app/Modules/*/Database</directory>
                 <directory suffix=".php">./app/Modules/*/Tests</directory>
                 <directory suffix=".php">./app/Foundation/Routes</directory>
-                <directory suffix=".php">./app/Foundation/Tests</directory>
             </exclude>
         </whitelist>
     </filter>

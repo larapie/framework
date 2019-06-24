@@ -2,8 +2,8 @@
 
 namespace App\Modules\User\Http\Controllers\Web;
 
-use App\Foundation\Abstracts\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Larapie\Core\Base\Controller;
 
 class ResetPasswordController extends Controller
 {

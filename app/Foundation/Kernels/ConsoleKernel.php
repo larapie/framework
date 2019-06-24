@@ -22,6 +22,13 @@ class ConsoleKernel extends Kernel
      */
     protected function schedule(Schedule $schedule)
     {
+
+        /**
+         *
+         * DO NOT REMOVE THIS.
+         * Defines the schedules from the modules.
+         *
+         */
         parent::schedule($schedule);
     }
 

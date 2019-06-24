@@ -2,8 +2,8 @@
 
 namespace App\Modules\User\Http\Controllers\Web;
 
-use App\Foundation\Abstracts\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Larapie\Core\Base\Controller;
 
 class LoginController extends Controller
 {

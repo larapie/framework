@@ -2,11 +2,11 @@
 
 namespace App\Modules\User\Http\Controllers\Web;
 
-use App\Foundation\Abstracts\Controller;
 use App\Modules\User\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Larapie\Core\Base\Controller;
 
 class RegisterController extends Controller
 {
