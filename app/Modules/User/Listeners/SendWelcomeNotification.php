@@ -14,17 +14,8 @@ use Larapie\Core\Base\QueuedListener;
 
 class SendWelcomeNotification extends QueuedListener
 {
-
     public function handle(UserRegisteredEvent $event): void
     {
         $event->getUser()->notify(new WelcomeNotification($event->getUser()));
-    }
-
-    /**
-     * @param UserRegisteredEvent $event
-     * @param $exception
-     */
-    public function failed(UserRegisteredEvent $event, $exception): void
-    {
     }
 }

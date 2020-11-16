@@ -7,22 +7,24 @@
         "laravel"
     ],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mcaskill/composer-merge-plugin.git"
+        }
+    ],
     "require": {
-        "php": "^7.2",
+        "php": ">=7.4",
         "ext-json": "*",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "laravel/framework": "^7.0|^8.0",
+        "wikimedia/composer-merge-plugin":"dev-feature/composer-v2"
+
     },
     "require-dev": {
-        "beyondcode/laravel-dump-server": "^1.0",
-        "filp/whoops": "^2.0",
-        "fzaninotto/faker": "^1.4",
-        "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^8.0",
-        "symfony/stopwatch": "^4.3"
+        "phpunit/phpunit": ">=9.0",
+        "dms/phpunit-arraysubset-asserts": ">=v0.1",
+        "symfony/stopwatch": ">=5.0"
     },
     "config": {
         "optimize-autoloader": true,

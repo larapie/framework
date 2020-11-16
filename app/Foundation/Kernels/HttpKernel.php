@@ -2,7 +2,6 @@
 
 namespace App\Foundation\Kernels;
 
-use App\Foundation\Http\Middleware\InjectAcceptJsonHeader;
 use Illuminate\Foundation\Http\Kernel;
 
 class HttpKernel extends Kernel
@@ -41,7 +40,7 @@ class HttpKernel extends Kernel
         'api' => [
             'throttle:60,1',
             'bindings',
-            'jsonheader',
+            'json-header',
             'cors',
         ],
     ];
@@ -63,8 +62,8 @@ class HttpKernel extends Kernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'cors' => \Barryvdh\Cors\HandleCors::class,
-        'jsonheader'=> InjectAcceptJsonHeader::class
+        'cors' => \Fruitcake\Cors\HandleCors::class,
+        'json-header'=> App\Foundation\Http\Middleware\InjectAcceptJsonHeader::class
     ];
 
     /**

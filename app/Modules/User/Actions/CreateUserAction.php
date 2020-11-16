@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Modules\User\Actions;
+
+use App\Modules\User\Events\UserCreatedEvent;
+use App\Modules\User\Models\User;
+use Larapie\Actions\Action;
+
+class CreateUserAction extends Action
+{
+    public function rules()
+    {
+        return [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'email_verified_at' => 'date',
+            'password' => 'required|string|min:8',
+        ];
+    }
+
+    public function handle()
+    {
+        return User::create($this->validated());
+    }
+
+    protected function onSuccess(User $user)
+    {
+        event(new UserCreatedEvent($user));
+    }
+}

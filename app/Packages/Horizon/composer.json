@@ -1,7 +1,7 @@
 {
     "name": "Horizon",
     "require": {
-        "laravel/horizon": "^1.4"
+        "laravel/horizon": ">=4.0"
     },
     "extra": {
         "laravel": {

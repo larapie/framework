@@ -2,6 +2,7 @@
 
 namespace App\Modules\User\Models;
 
+use App\Foundation\Traits\HasFactory;
 use App\Modules\User\Observers\UserObserver;
 use App\Modules\User\Policies\UserPolicy;
 use Illuminate\Foundation\Auth\User as Authenticable;
@@ -11,7 +12,9 @@ use Larapie\Core\Contracts\Policy;
 
 class User extends Authenticable implements Observers, Policy
 {
-    use Notifiable;
+    use Notifiable, HasFactory;
+
+    protected $guard_name = 'web';
 
     /**
      * The attributes that are mass assignable.
@@ -43,7 +46,7 @@ class User extends Authenticable implements Observers, Policy
     public function observers(): array
     {
         return [
-            UserObserver::class
+            UserObserver::class,
         ];
     }
 
@@ -51,4 +54,5 @@ class User extends Authenticable implements Observers, Policy
     {
         return UserPolicy::class;
     }
+
 }

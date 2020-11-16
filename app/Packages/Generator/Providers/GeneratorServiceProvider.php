@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Packages\Horizon\Providers;
+namespace App\Packages\Generator\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Larapie\Generator\LarapieGeneratorServiceProvider;
